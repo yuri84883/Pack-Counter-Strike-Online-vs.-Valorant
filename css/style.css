@@ -251,10 +251,26 @@ header {
 }
 
 .img-card {
+    position: relative;
     background: #111;
     padding: 5px;
     border: 1px solid #333;
     transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.img-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(90deg, #5c8a45, #8ab875, #ff4444, #5c8a45);
+    background-size: 200% 200%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: borderPulse 2.2s linear infinite;
+    pointer-events: none;
 }
 
 .img-card:hover {
@@ -266,6 +282,23 @@ header {
     width: 100%;
     display: block;
     filter: contrast(1.1) saturate(1.1);
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes borderPulse {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.7;
+    }
+    50% {
+        background-position: 100% 50%;
+        opacity: 1;
+    }
+    100% {
+        background-position: 0% 50%;
+        opacity: 0.7;
+    }
 }
 
 /* --- Sistema de Comentarios --- */

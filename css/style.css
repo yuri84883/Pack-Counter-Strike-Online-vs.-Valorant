@@ -1,0 +1,388 @@
+/* --- Estilos Generales Left 4 Dead 2 Theme --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fondo oscuro estilo menú del juego */
+    background-color: #0f1210; 
+    background-image: radial-gradient(circle at center, #1a221c 0%, #050705 100%);
+    font-family: 'Roboto', sans-serif;
+    color: #dcdcdc; /* Texto gris claro para lectura fácil */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(20, 25, 20, 0.95); /* Contenedor semi-transparente */
+    border: 1px solid #3a4a3a;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    position: relative;
+}
+
+/* Decoración de esquinas estilo militar */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, transparent, #5c8a45, transparent);
+}
+
+/* --- Encabezado --- */
+header {
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 2px solid #2a3a2a;
+    padding-bottom: 20px;
+}
+
+.main-title {
+    font-family: 'Lobster', cursive; /* O usa una fuente más agresiva si puedes importarla */
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+    letter-spacing: 1px;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sub-title {
+    color: #ff4444; /* Rojo alerta */
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.yt-logo {
+    width: 180px;
+    border-radius: 4px;
+    border: 2px solid #5c8a45; /* Borde verde militar */
+    transition: all 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.yt-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(92, 138, 69, 0.6);
+}
+
+/* --- Layout Principal --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 40px;
+}
+
+/* --- Tipografía y Textos --- */
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #b0b8b0;
+}
+
+.text-content strong {
+    color: #8ab875; /* Verde claro para énfasis */
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    border-left: 5px solid #ff4444; /* Barra roja lateral */
+    padding-left: 15px;
+    background: linear-gradient(90deg, rgba(255,68,68,0.1), transparent);
+}
+
+/* --- Tablas Técnicas --- */
+.mod-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: #151a15;
+    border: 1px solid #333;
+}
+
+.mod-stats-table th {
+    background: #2a3a2a;
+    color: #8ab875;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #5c8a45;
+}
+
+.mod-stats-table td {
+    padding: 12px;
+    border-bottom: 1px solid #2a3a2a;
+    color: #ccc;
+}
+
+.mod-stats-table tr:hover {
+    background: #1f261f;
+}
+
+/* --- Cajas de Información (Instalación/Créditos) --- */
+.install-box {
+    margin: 30px 0;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #444;
+    position: relative;
+}
+
+.install-box h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.install-box code {
+    display: block;
+    background: #000;
+    color: #5c8a45; /* Texto verde terminal */
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+    border-left: 3px solid #5c8a45;
+}
+
+/* Caja de Advertencia / Créditos */
+.warning-box {
+    background: rgba(60, 20, 20, 0.3);
+    border-left: 4px solid #8b1e1e;
+    color: #e0e0e0;
+}
+
+.warning-box strong {
+    color: #ff6b6b;
+}
+
+/* --- Botón de Descarga Estilo L4D2 --- */
+.download-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.yellow-btn {
+    background: linear-gradient(180deg, #e6b800 0%, #cc9900 100%);
+    color: #000;
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    box-shadow: 0 5px 0 #806000, 0 10px 20px rgba(0,0,0,0.5);
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.yellow-btn:hover {
+    background: linear-gradient(180deg, #ffd700 0%, #e6b800 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #806000, 0 15px 25px rgba(0,0,0,0.6);
+}
+
+.yellow-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #806000;
+}
+
+/* --- Video Tutorial --- */
+.tutorial-container {
+    margin-top: 40px;
+    background: #000;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.tutorial-header h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #5c8a45;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Columna Derecha (Imágenes) --- */
+.side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.img-card {
+    background: #111;
+    padding: 5px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.img-card:hover {
+    transform: scale(1.02);
+    border-color: #5c8a45;
+}
+
+.img-card img {
+    width: 100%;
+    display: block;
+    filter: contrast(1.1) saturate(1.1);
+}
+
+/* --- Sistema de Comentarios --- */
+.comment-box {
+    background: #1a221c;
+    padding: 20px;
+    border: 1px solid #3a4a3a;
+    margin-top: 20px;
+}
+
+.comment-box h3 {
+    color: #8ab875;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.comment-box textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #0f1210;
+    border: 1px solid #3a4a3a;
+    color: #fff;
+    resize: none;
+    font-family: inherit;
+}
+
+.comment-box textarea:focus {
+    outline: none;
+    border-color: #5c8a45;
+}
+
+.blue-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2a3a2a;
+    color: #fff;
+    border: 1px solid #5c8a45;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.blue-btn:hover {
+    background: #5c8a45;
+}
+
+.comentario-item {
+    background: #222;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 3px solid #5c8a45;
+    color: #ccc;
+}
+
+.btn-borrar {
+    background: #521818;
+    border: none;
+    color: #ffaaaa;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* --- Listas de Mods --- */
+.mod-category {
+    margin-bottom: 25px;
+}
+
+.mod-category h3 {
+    color: #fff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.mod-list li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+    list-style: none;
+}
+
+.mod-list li::before {
+    content: "►";
+    color: #5c8a45;
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    top: 3px;
+}
+
+.mod-list li span {
+    color: #8ab875;
+    font-weight: bold;
+}
+
+/* --- Diseño Responsivo --- */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .header-flex {
+        flex-direction: column;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+}
